@@ -10,7 +10,6 @@
     "build:dev": "vue-cli-service build --mode develop --target app",
     "build:dev:watch": "vue-cli-service build --mode develop --watch --target app",
     "deploy": "vue-cli-service build --target app && firebase --project picol-c8553 deploy",
-    "generate": "nuxt generate"
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "test:unit:watch": "vue-cli-service test:unit --watch",
