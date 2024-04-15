@@ -88,8 +88,6 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Zip artifact for upload
-        run: cd out && zip ../out.zip . -r
       - name: Archive Production Artifact
         uses: actions/upload-artifact@v2
         with:
