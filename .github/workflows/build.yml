@@ -6,9 +6,7 @@ on:
   issue_comment:
     types: [created, edited]
   workflow_dispatch:
-
-branches: [ main ]
-
+    branches: [ main ]
 jobs:
   # for Pull Request (exclude merged)
   pullreq_build:
@@ -46,7 +44,7 @@ jobs:
         env:
           webhook_url: "https://ttt-community.g.kuroco.app/direct/menu/github/"
           webhook_secret: "688c2562524f59673a3c4ea65b958f72"
-          data: '{"single_zip":"1","domain":"ttt-community.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
+          data: '{"domain":"ttt-community.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
           
   #for Push
   pushed_build:
@@ -76,4 +74,4 @@ jobs:
         env:
           webhook_url: "https://ttt-community.g.kuroco.app/direct/menu/github/"
           webhook_secret: "688c2562524f59673a3c4ea65b958f72"
-          data: '{"single_zip":"1","domain":"ttt-community.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
+          data: '{"domain":"ttt-community.g.kuroco-front.app","repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
