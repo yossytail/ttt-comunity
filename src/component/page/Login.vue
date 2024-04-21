@@ -10,9 +10,7 @@
           <p class="p-login__headline" v-html="$t('headline')"></p>
           <p class="p-login__lead">
             <span v-html="$t('lead.header')"></span>
-            <a href="https://github.com/diverta/picol">{{ $t('lead.github_link') }}</a>
             <span v-html="$t('lead.footer')"></span>
-            <a href="https://www.diverta.co.jp/contact/">{{ $t('lead.inquiry_link') }}</a>
           </p>
 
           <div class="p-login__form">
@@ -88,7 +86,7 @@ export default class Login extends Vue {
     e.stopPropagation();
     e.preventDefault();
 
-    LocalStorage.setCompanyCd('picol');
+    LocalStorage.setCompanyCd('ttt-community');
 
     function createNodeWithAttributes(tagName: string, attributes: { nm: string; val: string }[] = []) {
       const node = document.createElement(tagName);
@@ -165,7 +163,7 @@ export default class Login extends Vue {
       return;
     }
 
-    this.input.companyCd = 'picol';
+    this.input.companyCd = 'ttt-community';
     this.showsCompanyCdInput = true;
   }
 
@@ -179,14 +177,10 @@ export default class Login extends Vue {
 {
   "headline": "コミュニケーション活性化のための<br />クローズドSNS「Picol」を体験する",
   "lead": {
-    "github_link": "Githubレポジトリ",
     "header": "<br />デモ版のPicolをお試しいただけます。下記のトライアル用アカウントでご利用ください。<br /> \
     <br /> \
-    Company code: picol<br /> \
-    ログインID: guest<br /> \
-    パスワード：guest528+<br /><br /> \
+    Company code: ttt-community<br /> \
     このサービスはバックエンドはKurocoを利用していますが、フロントエンドはオープンソースになっています。ソースコードは以下にありますので、ご自由にお使いください。<br />",
-    "inquiry_link": "お問い合わせフォーム",
     "footer": "<br /><br />【ご注意】<br /> \
     サービスは随時アップデートされております。実際のPicolの機能が利用可能になっており、投稿できますが、公開・削除されることに同意の上で記事を投稿ください。投稿内容が公序良俗に反する等の場合は、当社の判断で個別に削除する場合がございます。<br /> \
     ご利用について不明な点がございましたら以下から開発会社へお問い合わせください。<br />",
@@ -202,14 +196,10 @@ export default class Login extends Vue {
 {
   "headline": "Private SNS \"Picol\"",
   "lead": {
-    "github_link": "Github Repository",
     "header": "<br />You can try the demo version of Picol. Please use the trial account below.<br /> \
     <br /> \
-    Company code: picol<br /> \
-    Id: guest<br /> \
-    Password：guest528+<br /><br /> \
+    Company code: ttt-community<br /> \
     <br />This service uses Kuroco as the back-end, but the front-end is open source. The source code is below, so feel free to use it.<br />",
-    "inquiry_link": "Contact Form",
     "footer": "<br /><br />[Notice]<br /> \
     The service is updated from time to time. Although the actual Picol function is available and you can post, please post the article with the agreement that it will be published and deleted. If the posted content is against public order and morals, we may delete it at our discretion.<br /> \
     If you have any questions about this service,please contact us.<br />",
